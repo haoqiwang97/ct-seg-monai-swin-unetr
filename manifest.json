@@ -1,0 +1,51 @@
+{
+  "author": "support@flywheel.io",
+  "cite": "",
+  "command": "python run.py",
+  "config": {
+    "use-multilabel": {
+      "default": true,
+      "description": "Use --ml flag. it will Save one multilabel image for all classes.",
+      "type": "boolean"
+    },
+    "save-json": {
+      "type": "boolean",
+      "default": false,
+      "description": "use flag to save json containing model results."
+    },
+    "debug": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable debug mode."
+    }
+  },
+  "description": "CT Segmentation with MONAI Swin UNETR",
+  "environment": {},
+  "custom": {
+    "flywheel": {
+      "show-job": true
+    },
+    "gear-builder": {
+      "image": "flywheel/ct-seg-monai-swin-unetr-cpu:0.1.6",
+      "category": "utility"
+    }
+  },
+  "inputs": {
+    "input-file": {
+      "base": "file",
+      "optional": false,
+      "type": {
+        "enum": [
+          "dicom"
+        ]
+      },
+      "description": "Input file for the gear"
+    }
+  },
+  "label": "CT Seg MONAI Swin UNETR",
+  "name": "ct-seg-monai-swin-unetr",
+  "source": "",
+  "url": "",
+  "license": "MIT",
+  "version": "0.0.6"
+}
